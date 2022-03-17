@@ -13,7 +13,7 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	
 	<!--  Date date = new Date(); 
-	스프링아 객체를 대신생성해서 만들어줘
+	스프링이 객체를 대신생성해서 만들어줌
 	-->
 		<bean id = "date" class = "java.util.Date" />
 		<!-- -->
