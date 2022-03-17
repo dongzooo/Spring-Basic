@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.test.sample.Chef;
+
 
 @Controller
 
@@ -26,6 +28,11 @@ public class TestController {
 	@Autowired //각각 변수에 하나씩 붙혀주기
 	private Date day;
 	
+	@Autowired
+	private Chef chef;
+	
+	
+	
 	//#1 리턴타입 : String : return "jsp 파일 이름"
 	@GetMapping("hello")
 	public String hello() {
@@ -37,7 +44,9 @@ public class TestController {
 	@GetMapping("hello2")
 	public void hello2() {
 		System.out.println("hello2 요청!");
-		System.out.println(date);
+		System.out.println("date : " + date);
+		System.out.println("day : " +  day);
+		System.out.println("chef : " + chef);
 	}
 	
 }
