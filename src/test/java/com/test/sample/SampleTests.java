@@ -2,6 +2,8 @@ package com.test.sample;
 
 import static org.junit.Assert.*;
 
+import java.util.Date;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,17 +25,32 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 
 public class SampleTests {
-
-	@Autowired
-	private Restaurant restaruant;
 	
-	//Chef, Restaurant 빈이 생성 잘되었는지 체크
-	@Test 
-	public void testExist() {
-		assertNotNull(restaruant); //null이 아니면 테스트 성공으로 체크해주는 메서드
-		
-		System.out.println(restaruant);
-		System.out.println(restaruant.getChef());
-	}
+	@Autowired
+	private HelloBean hello;
+	
+
+//	@Autowired
+//	private Restaurant restaruant;
+//	
+//	//Chef, Restaurant 빈이 생성 잘되었는지 체크
+//	@Test 
+//	public void testExist() {
+//		assertNotNull(restaruant); //null이 아니면 테스트 성공으로 체크해주는 메서드
+//		
+//		System.out.println(restaruant);
+//		System.out.println(restaruant.getChef());
+//	}
+	
+//	@Test
+//	public void helloTest() {
+//		log.info(hello);
+//		log.info(hello.getNum());
+//		log.info(hello.getMsg());
+//		log.info(hello.getReg());
+//	}
+//	
+//	
+	
 
 }

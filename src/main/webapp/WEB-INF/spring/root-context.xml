@@ -14,13 +14,13 @@
 	
 	<!--  Date date = new Date(); 
 	스프링이 객체를 대신생성해서 만들어줌
-	-->
+		-->	
 		<bean id = "date" class = "java.util.Date" />
-		<!-- -->
+		
 		<bean id = "day" class = "java.util.Date" />
 		
 		<bean id = "chef" class = "com.test.sample.Chef" />
-		
+
 		
 		<!--  1번째 방법 : 2번보다는 덜쓰인다
 			chef의 getmethod를 불러와 value = " "값의 속성을 채워준다. 
@@ -41,12 +41,46 @@
  		<context:component-scan base-package="com.test.sample" />
  		-->
  		<context:component-scan base-package="com.test.sample" />
+ 		<context:component-scan base-package="com.basic.controller" />
  		
  		<!-- 						->Chef			->Chef
  		 [   ] -> root-context.xml -> Restaurant -> Restaurant 
  		 							^ Chef
  		스피링시작하면 스피링시작을 위한 context 메모리 영역이 시작됌
  		 -->
+ 		 
+ 		 <!--  스피링이 객체생성, 
+ 		 	변수 set해쥼
+ 		기본생성사 자동으로 만들어진것에 사용/ 사용자가 직접 만든 생성자에는 적용안됌
+ 		
+ 		<bean id="hello" class = "com.test.sample.HelloBean">
+ 			<property name="num" value= "10"></property>
+ 			<property name="msg" value = "Hello Spring"></property>
+ 			<property name="reg" ref ="date"/>
+ 		</bean>
+ 		 
+ 		  		 
+ 		<bean id ="hello" class = "com.test.sample.HelloBean">
+ 			<constructor-arg  index="0" value ="100"/>
+ 			<constructor-arg  index="1" value ="hahaha"/>
+ 			<property name="reg" ref="date"></property>
+ 		</bean>
+ 		
+ 		public HelloBean(int num, String msg, int a, long b)
  		
  		
+ 		<bean id ="hello" class = "com.test.sample.HelloBean">
+ 			<constructor-arg  value ="100" type="int"/>
+ 			<constructor-arg  value ="hahaha" type="java.long.String"/>
+ 			<property name="reg" ref="date"></property> 
+ 		</bean>
+ 		  set메서드 있어야 사용가능하다 -->
+ 		 
+ 		 
+ 		 
+ 		 
+ 		 
+ 		 
+ 		 
+ 		 
 </beans>
