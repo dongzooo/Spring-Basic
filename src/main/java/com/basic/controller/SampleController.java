@@ -33,8 +33,7 @@ public class SampleController {
 	 * Delete   DELETE
 	 * */
 	
-	@RequestMapping("test"
-			)
+	@RequestMapping("test")
 	public String test() {
 		System.out.println("test page 요청됌");
 		
