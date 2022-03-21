@@ -16,14 +16,7 @@ public class RegisterController {
 	@GetMapping("reg")
 	public void register() {
 		System.out.println("register 페이지 접속");
-		
 	}
-	
-//	public void ex03(HttpServletRequest request, Model model) {
-//		System.out.println("ex03 요청!!");
-//		//model 객체에 속성을 추가
-//		model.addAttribute("name", "터미네이터");
-//		model.addAttribute("name2", "T1000");
 	
 	@GetMapping("dto")
 	public void dto(RegisterDTO dto, HttpServletRequest request, Model model) {
@@ -34,12 +27,23 @@ public class RegisterController {
 		System.out.println(dto.getEmail());
 		System.out.println(dto.getPhone());
 		
-		request.setAttribute("id" , dto.getId());
-		request.setAttribute("pw", dto.getPw());
-		request.setAttribute("name" , dto.getName());
-		request.setAttribute( "sex", dto.getSex()[0]);
-		request.setAttribute("email" , dto.getEmail());
-		request.setAttribute("phone" , dto.getPhone());
+		
+		model.addAttribute("id" , dto.getId());
+		model.addAttribute("pw", dto.getPw());
+		model.addAttribute("name" , dto.getName());
+		model.addAttribute( "sex", dto.getSex()[0]);
+		model.addAttribute("email" , dto.getEmail());
+		model.addAttribute("phone" , dto.getPhone());
+		
+		
+		
+//		request.setAttribute("id" , dto.getId());
+//		request.setAttribute("pw", dto.getPw());
+//		request.setAttribute("name" , dto.getName());
+//		request.setAttribute( "sex", dto.getSex()[0]);
+//		request.setAttribute("email" , dto.getEmail());
+//		request.setAttribute("phone" , dto.getPhone());
+		
 		
 		
 	}
