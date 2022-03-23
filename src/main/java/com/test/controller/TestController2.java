@@ -33,11 +33,11 @@ public class TestController2 {
 	}
 	
 	//http://localhost:8080/day03/pro?id=11&pw=22
-	@GetMapping("pro")
 	//#1. 매개변수 나열해서 하나씩 따로 받기
 //	public void pro(String id, String pw)
 	//#2 DTO안에 자동으로 바인딩해서 받기 : 이때 DTO에는 setter 존재해야함
 	
+	@GetMapping("pro1")
 	public void pro(TestDTO dto,HttpServletRequest request, HttpServletResponse response,HttpSession session){ //set메서드가 있어야 바인디잉 된다
 		System.out.println("pro 요청!");
 		System.out.println("request : " + request);

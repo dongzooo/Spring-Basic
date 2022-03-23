@@ -28,7 +28,7 @@ public interface TimeMapper {
 	public int insertMember(TestDTO dto);
 		
 	//회원 한 명 비밀번호 수정 : update test set pw=#{pw} where id = #{}
-	public int setPw(TestDTO dto);	
+	public int modifyPw(TestDTO dto);	
 	
 	//회원 삭제 deleteMember : delete from test where id=#{id} : <delete>
 	public int deleteMember(String id);

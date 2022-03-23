@@ -48,7 +48,7 @@ public class TimeMapperTests {
 //	}
 	
 //	@Test
-//	public void setPw() {
+//	public void modifyPw() {
 //		TestDTO dto = new TestDTO();
 //		dto.setId("spring01");
 //		dto.setPw("2222");

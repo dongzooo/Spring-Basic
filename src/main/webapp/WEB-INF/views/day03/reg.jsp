@@ -57,7 +57,7 @@ img{
 </style>
 <body>
 <form action="/day03/dto">
- <header><img src="Google_2015_logo.svg.png" alt="logo"></header>
+ <header><img src="/mySpring/src/main/webapp/WEB-INF/views/day03/Google_2015_logo.svg.png" alt="logo"></header>
     <table >
         <tr>
             <td>

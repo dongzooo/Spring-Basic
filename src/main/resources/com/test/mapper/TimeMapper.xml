@@ -22,7 +22,7 @@
  		insert into test values(#{id}, #{pw}, #{age}, sysdate)
  	</insert>
  	
- 	<update id="setPw">
+ 	<update id="modifyPw">
  		update test set pw=#{pw} where id = #{id}
  	
  	</update>
