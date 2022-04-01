@@ -25,8 +25,8 @@
 		
 		<!--  DB관련 세팅 -->
 		<bean id = "hikariConfig" class = "com.zaxxer.hikari.HikariConfig" >
-			<property name="driverClassName" value ="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
-			<property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@javaking.iptime.org:1521:ORCL"></property>
+			<property name="driverClassName" value =""></property>
+			<property name="jdbcUrl" value=""></property>
 			<property name="username" value=""></property>
 			<property name="password" value=""></property>
 		</bean>
